@@ -1,0 +1,51 @@
+@(message: String)(formFilme : Form[Filme])
+
+@import helper._
+@import b4.vertical.fieldConstructor
+
+
+@main("Adicionar Filme") {
+
+	<nav class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top">
+        <div class="container">
+          <a class="navbar-brand nav-link" href="@routes.HomeController.index()">Pop Films</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="@routes.HomeController.cadastroDeFilme()">Adicionar Filmes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="@routes.HomeController.listaTudo()">Lista de Filmes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="@routes.HomeController.sobre()">Sobre</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+ @*nosso content*@
+	  	<br>
+		@b4.form(CSRF(routes.HomeController.cadastroDeNovoFilme())){
+
+			@b4.text(formFilme("nome"),'_label -> "Nome")
+			@b4.text(formFilme("genero"),'_label -> "Gênero")
+			@b4.date(formFilme("data_lancamento"),'_label -> "Data de Lançamento")
+			@b4.submit('class -> "btn btn-warning"){Adicionar}
+
+		} 
+     
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    <!-- Footer -->
+    <footer class="navbar-expand-lg bg-danger fixed-bottom">
+      <p class="text-center text-white">&copy Copyright - Desenvolvido por Aline Gabriele e Pedro Vitor - 2017</p>
+    </footer>
+}	

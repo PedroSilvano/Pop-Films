@@ -1,0 +1,58 @@
+@(message: String)
+
+
+@main("Sobre") {
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top">
+      <div class="container">
+        <a class="navbar-brand nav-link" href="@routes.HomeController.index()">Pop Films</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="@routes.HomeController.cadastroDeFilme()">Adicionar Filmes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="@routes.HomeController.listaTudo()">Lista de Filmes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="@routes.HomeController.sobre()">Sobre</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  
+    <br>
+    <h4>Sobre</h4>
+    <hr>
+    <br>
+    <p>O Pop Films é a forma mais fácil de você salvar os filmes que você deseja assistir futuramente de maneira rápida e fácil.</p>
+
+      <!-- /.container -->
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        
+        
+      <!-- Footer -->
+      <footer class="navbar-expand-lg bg-danger fixed-bottom">
+        <p class="text-center text-white">&copy Copyright - Desenvolvido por Aline Gabriele e Pedro Vitor - 2017</p>
+      </footer>
+  
+      <!-- Bootstrap core JavaScript -->
+      <script src="@routes.Assets.versioned("javascripts/jquery.js")"></script>
+      <script src="@routes.Assets.versioned("javascripts/bootstrap_bundle.js")"></script>
+}
